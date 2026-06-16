@@ -1,0 +1,25 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Büyük Giriş Alanı (Hero) Tasarımı */
+.hero-section {
+    /* İnternetten telifsiz kaliteli bir temizlik görseli linki koyduk */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200') no-repeat center center;
+    background-size: cover;
+    height: 60vh; /* Ekran yüksekliğinin %60'ı kadar yer kapla */
+}
+
+/* Tablonun başlık kısımlarını kalınlaştır ve sola yasla */
+table th {
+    width: 40%;
+    color: #495057;
+}
+
+/* Linkleri ve listeleri biraz rahatlatmak için padding */
+ul li {
+    padding: 8px 0;
+}
