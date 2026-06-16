@@ -344,47 +344,35 @@ html, body {
     box-sizing: border-box !important;
 }
 
-/* Telefonlar İçin (Mobil YouTube Mantığı) */
+/* ==========================================
+   ÜST MENÜYÜ (NAVBAR) TELEFONA UYARLAMA KODLARI
+   ========================================== */
+
 @media (max-width: 768px) {
-    
-    /* Üst menü, butonlar veya konteynerlerin taşmasını engeller */
-    div, section, header, footer, main {
-        max-width: 100% !important;
+    /* Menünün ana taşıyıcı kutusunu yan yana yerine dikey düzene sokar */
+    header, nav, .navbar, .menu-container {
+        display: flex !important;
+        flex-direction: column !important; /* Butonları alt alta dizer */
+        align-items: center !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 10px 0 !important;
+        gap: 10px !important;
+    }
+
+    /* Menü içindeki linklerin/butonların yan yana sıkışmasını engeller */
+    nav a, .navbar a, .menu-item, .nav-links {
+        display: block !important;
+        width: 90% !important; /* Butonlar telefon ekranında şık birer satır olur */
+        text-align: center !important;
+        margin: 5px 0 !important;
+        padding: 10px !important;
         box-sizing: border-box !important;
     }
 
-    /* Hizmet Kartları Alanı */
-    .services-container {
-        display: flex !important;
-        flex-direction: column !important; /* Kartları alt alta dizer */
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 15px !important;
-        margin: 0 auto !important;
-        gap: 20px !important;
-    }
-
-    /* Kartların Kendisi */
-    .feature-card {
-        width: 100% !important;
-        min-width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 0 15px 0 !important;
-        display: block !important;
-    }
-
-    /* İletişim, WhatsApp ve Menü Butonları */
-    .back-to-home-container, .contact-info-box {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 15px !important;
+    /* Logo ve ikon alanının ortalanması */
+    .logo, .brand {
         text-align: center !important;
-        margin: 10px auto !important;
-    }
-
-    /* Resimlerin ekrandan taşmasını önler */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
+        margin-bottom: 10px !important;
     }
 }
