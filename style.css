@@ -384,3 +384,102 @@ html, body {
         display: none !important;
     }
 }
+/* ==========================================================================
+   SİTEYİ RENKLENDİRME VE DİNAMİK EFEKTLER (YENİ)
+   ========================================================================== */
+
+/* Genel Yazı ve Seçim Rengi */
+::selection {
+    background-color: #00ced1;
+    color: white;
+}
+
+/* Hizmet Kartlarına Canlılık ve Hareket */
+.feature-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Kartın üzerine gelindiğinde (Hover durumu) */
+.feature-card:hover {
+    transform: translateY(-8px) !important; /* Kart hafifçe yukarı esner */
+    box-shadow: 0 15px 35px rgba(0, 206, 209, 0.15) !important; /* Turkuaz tonlu gölge */
+    border-color: rgba(0, 206, 209, 0.3) !important;
+}
+
+/* Kartın altına gizli renkli çizgi efekti */
+.feature-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #00ced1, #007bff);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover::after {
+    transform: scaleX(1); /* Fareyle gelince çizgi kendini gösterir */
+}
+
+/* Üst Menüdeki (Navbar) Linklerin Renklenmesi */
+.navbar-custom-links a {
+    position: relative;
+    transition: color 0.3s ease !important;
+}
+
+.navbar-custom-links a:hover {
+    color: #00ced1 !important; /* Fareyle gelince turkuaz olur */
+}
+
+/* Açılır Menü (Dropdown) İçindeki Linklerin Renklenmesi */
+.dropdown-box-content a {
+    transition: all 0.3s ease !important;
+    border-left: 0 solid #00ced1;
+}
+
+.dropdown-box-content a:hover {
+    background-color: rgba(0, 206, 209, 0.05) !important;
+    color: #00ced1 !important;
+    padding-left: 20px !important; /* Hafifçe sağa kayma efekti */
+    border-left: 4px solid #00ced1; /* Sol tarafta turkuaz çizgi belirir */
+}
+
+/* Mavi Butonları Daha Canlı Hale Getirmek */
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #00ced1) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #00ced1, #007bff) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 206, 209, 0.3) !important;
+}
+
+/* Geri Dön Butonlarına (Btn-Light) Canlılık Katalım */
+.btn-light {
+    transition: all 0.3s ease !important;
+}
+
+.btn-light:hover {
+    background-color: #333 !important;
+    color: white !important;
+    transform: translateX(-3px) !important; /* Hafif geri gitme hissi */
+}
+
+/* ==========================================================================
+   TÜM SİTE İÇİN YUMUŞAK TURKUAZ GEÇİŞLİ ARKA PLAN (YENİ)
+   ========================================================================== */
+body {
+    /* Yukarıda saf beyaz başlar, aşağıya doğru indikçe çok yumuşak, gözü yormayan pastel bir turkuaza dönüşür */
+    background: linear-gradient(to bottom, #ffffff 0%, #f4fcfc 40%, #e0f7f7 100%) !important;
+    background-attachment: scroll !important; /* Renk geçişinin sayfa boyunca doğal şekilde akmasını sağlar */
+    min-height: 100vh;
+}
