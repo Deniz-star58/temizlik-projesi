@@ -331,42 +331,60 @@ body {
     background: transparent;
 }
 /* ==========================================
-   MOBİL CİHAZLAR İÇİN UYUMLULUK KODLARI (RESPONSIVE)
+   YATAY KAYMAYI VE TAŞMAYI ENGELLEYEN KESİN ÇÖZÜM
    ========================================== */
 
+/* Tüm sitede sağa-sola taşmayı kökten engeller */
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important; /* Sağa doğru kaydırma çubuğunu tamamen yok eder */
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Telefonlar İçin (Mobil YouTube Mantığı) */
 @media (max-width: 768px) {
-    /* 1. Hizmet Kartlarının Dizilimi */
+    
+    /* Üst menü, butonlar veya konteynerlerin taşmasını engeller */
+    div, section, header, footer, main {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Hizmet Kartları Alanı */
     .services-container {
-        flex-direction: column !important; /* Kartları yan yana yerine alt alta dizer */
-        align-items: center !important;
-        padding: 10px !important;
+        display: flex !important;
+        flex-direction: column !important; /* Kartları alt alta dizer */
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important;
+        margin: 0 auto !important;
         gap: 20px !important;
     }
 
-    /* 2. Kartların Esnekliği */
+    /* Kartların Kendisi */
     .feature-card {
-        width: 100% !important; /* Telefon ekranını tam kaplasın */
+        width: 100% !important;
+        min-width: 100% !important;
         max-width: 100% !important;
-        margin: 0 auto !important;
+        margin: 0 0 15px 0 !important;
+        display: block !important;
     }
 
-    /* 3. Başlıklar ve Yazı Boyutları */
-    .services-hero h1 {
-        font-size: 1.8rem !important; /* Telefonda başlık çok devasa durmasın */
+    /* İletişim, WhatsApp ve Menü Butonları */
+    .back-to-home-container, .contact-info-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important;
+        text-align: center !important;
+        margin: 10px auto !important;
     }
 
-    .services-hero p {
-        font-size: 1rem !important;
-        padding: 0 15px !important;
-    }
-
-    /* 4. Resimlerin Telefona Göre Ayarlanması */
-    .feature-card img {
-        height: 180px !important; /* Resim yüksekliğini telefonda biraz daralttık */
-    }
-
-    /* 5. Menü ve Genel Sayfa Kenar Boşlukları */
-    body {
-        padding: 10px !important;
+    /* Resimlerin ekrandan taşmasını önler */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
     }
 }
