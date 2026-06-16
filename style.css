@@ -330,3 +330,43 @@ body {
     height: 25px;
     background: transparent;
 }
+/* ==========================================
+   MOBİL CİHAZLAR İÇİN UYUMLULUK KODLARI (RESPONSIVE)
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* 1. Hizmet Kartlarının Dizilimi */
+    .services-container {
+        flex-direction: column !important; /* Kartları yan yana yerine alt alta dizer */
+        align-items: center !important;
+        padding: 10px !important;
+        gap: 20px !important;
+    }
+
+    /* 2. Kartların Esnekliği */
+    .feature-card {
+        width: 100% !important; /* Telefon ekranını tam kaplasın */
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    /* 3. Başlıklar ve Yazı Boyutları */
+    .services-hero h1 {
+        font-size: 1.8rem !important; /* Telefonda başlık çok devasa durmasın */
+    }
+
+    .services-hero p {
+        font-size: 1rem !important;
+        padding: 0 15px !important;
+    }
+
+    /* 4. Resimlerin Telefona Göre Ayarlanması */
+    .feature-card img {
+        height: 180px !important; /* Resim yüksekliğini telefonda biraz daralttık */
+    }
+
+    /* 5. Menü ve Genel Sayfa Kenar Boşlukları */
+    body {
+        padding: 10px !important;
+    }
+}
