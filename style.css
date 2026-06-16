@@ -23,3 +23,310 @@ table th {
 ul li {
     padding: 8px 0;
 }
+/* Menü Çubuğunun Genel Kutusu */
+.navbar {
+    display: flex;                  /* Elemanları yan yana diz */
+    justify-content: space-between; /* Logo sola, linkler sağa yaslansın */
+    align-items: center;            /* Dikeyde tam ortala */
+    background-color: #333;         /* Koyu gri arka plan */
+    padding: 15px 30px;             /* İç boşluklar */
+    margin-top: -50px;              /* Sayfa başındaki boşluğu sıfırlamak için */
+}
+
+/* Logo Stili */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Linklerin Listesi */
+.nav-links {
+    list-style: none;               /* Nokta işaretlerini kaldır */
+    display: flex;                  /* Linkleri de yan yana diz */
+    gap: 20px;                      /* Linklerin arasına boşluk bırak */
+    margin: 0;
+    padding: 0;
+}
+
+/* Menü İçindeki Link Yazıları */
+.nav-links a {
+    color: white;                   /* Yazı rengi beyaz */
+    text-decoration: none;          /* Alt çizgiyi kaldır */
+    font-size: 16px;
+    transition: 0.3s;               /* Renk geçiş yumuşaklığı */
+}
+
+/* Fareyle Üzerine Gelince (Hover) */
+.nav-links a:hover {
+    color: #00ced1 !important; /* Rengi turkuaz yapar */
+}
+/* Genel Sayfa Ayarları ve Yeni Yazı Tipi */
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hakkımızda Giriş Başlığı */
+.about-hero {
+    text-align: center;
+    padding: 60px 20px 20px 20px;
+}
+.about-hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.about-hero p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Yan Yana Düzen Kapsayıcısı */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    gap: 40px; /* Resim ve kutular arasındaki boşluk */
+    align-items: center;
+}
+
+/* Sol Taraftaki Resim Kutusu */
+.about-image-box {
+    flex: 1;
+}
+.about-image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* Resmin köşelerini yuvarlar */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Hafif gölge */
+}
+
+/* Sağ Taraftaki 4'lü Kutu Düzeni */
+.features-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Yan yana ikişer kutu diz */
+    gap: 20px; /* Kutuların birbirine olan mesafesi */
+}
+
+/* Attığın Görseldeki Kartların Birebir Tasarımı */
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px; /* Yumuşak yuvarlak köşeler */
+    box-shadow: 0 8px 24px rgba(149, 157, 165, 0.1); /* Görseldeki gibi çok hafif modern gölge */
+    border: 1px solid #f0f0f0;
+    transition: 0.3s ease;
+}
+
+/* Kartların Üzerine Gelince Hafifçe Yukarı Esneme Efekti */
+.feature-card:hover {
+    transform: translateY(-50px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* Kartın İçindeki Başlık ve İkon Düzeni */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.card-icon {
+    font-size: 20px;
+    background-color: #f0f2ff; /* İkonun arkasındaki hafif renkli yuvarlak */
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+
+.feature-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #111;
+    font-weight: 600;
+}
+
+/* Kartların İçindeki Yazı Stili */
+.feature-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Telefonlar İçin Uyum (Ekran küçülürse her şey alt alta düzgünce dizilir) */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Geri Dönüş Butonunun Kapsayıcı Kutusu */
+.back-to-home-container {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    padding: 0 20px;
+    text-align: left; /* Butonu sol üst köşeye hizalar */
+}
+
+/* Tıpkı aşağıdaki kutucuklar gibi tasarlanan buton stili */
+.back-home-button {
+    display: inline-flex;
+    align-items: center;
+    background: white;
+    color: #111 !important; /* Yazı rengi koyu gri/siyah */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 12px; /* Yumuşak yuvarlak köşeler */
+    box-shadow: 0 8px 24px rgba(149, 157, 165, 0.1); /* Aşağıdaki kutularla aynı modern gölge */
+    border: 1px solid #f0f0f0;
+    transition: 0.3s ease; /* Hareket yumuşaklığı */
+}
+
+/* Fareyle üzerine gelince (Hover) tıpkı aşağıdaki kutular gibi esneme efekti */
+.back-home-button:hover {
+    transform: translateY(-5px); /* Hafifçe yukarı esner */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15); /* Gövdesi daha belirginleşir */
+    color: #00ced1 !important; /* Üzerine gelince yazı turkuaza döner */
+}
+/* Ana Menü Çubuğu Tasarımı */
+.main-custom-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.navbar-brand-logo a {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00ced1;
+    text-decoration: none;
+}
+
+.navbar-custom-links {
+    display: flex;
+    gap: 15px; /* Kutuların arasındaki mesafe */
+    align-items: center;
+}
+
+/* Ana Menüdeki Linklerin Hareketli Kutucuk Tasarımı */
+.nav-box-link, .dropdown-box-btn {
+    display: inline-block;
+    background: white;
+    color: #111 !important;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 12px; /* Yumuşak yuvarlak köşeler */
+    box-shadow: 0 4px 10px rgba(149, 157, 165, 0.1); /* Hafif gölge */
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s ease; /* Hareket yumuşaklığı */
+}
+
+/* Butonların Üzerine Gelince (Hover) Yukarı Esneme Efekti */
+.nav-box-link:hover, .dropdown-box-btn:hover {
+    transform: translateY(-4px); /* Hafifçe yukarı esner */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* Gövdesi belirginleşir */
+    color: #00ced1 !important; /* Yazı turkuaza döner */
+}
+
+/* --- AÇILIR MENÜ (DROPDOWN) SİHRİ --- */
+.dropdown-box {
+    position: relative;
+    display: inline-block;
+}
+
+/* Fare Hizmetlerin Üzerine Gelince Açılacak Pencere */
+.dropdown-box-content {
+    display: none;
+    position: absolute;
+    top: 90%; /* %100 olan yeri %90 yaptık, kutuyu yukarı butona doğru çektik */
+    left: 0;
+    background-color: white;
+    min-width: 240px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid #eaeaea;
+    z-index: 1000;
+    padding: 10px 0;
+    overflow: hidden;
+    margin-top: 0px; /* Mesafeyi tamamen sıfırladık */
+}
+
+/* Açılır Menünün İçindeki Seçenek Linkleri */
+.dropdown-box-content a {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+/* Açılır Menüdeki Seçeneklerin Üzerine Gelince Renk Değişmesi */
+.dropdown-box-content a:hover {
+    background-color: #f0f2ff;
+    color: #00ced1;
+    padding-left: 25px; /* Sağa doğru küçük tatlı bir kayma efekti */
+}
+
+/* Fareyle "Hizmetlerimiz" Kutusunun Üstüne Gelindiğinde Menüyü Göster */
+.dropdown-box:hover .dropdown-box-content {
+    display: block;
+    animation: fadeInMenu 0.3s ease; /* Akıcı açılış efekti */
+}
+
+/* Menünün Yumuşakça Belirmesi İçin Animasyon */
+@keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Fare Hizmetlerin Üzerine Gelince Açılacak Pencere */
+.dropdown-box-content {
+    display: none;
+    position: absolute;
+    top: 90%; /* Kutuyu yukarı, butona doğru sıfırlayacak şekilde çektik */
+    left: 0;
+    background-color: white;
+    min-width: 240px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid #eaeaea;
+    z-index: 1000;
+    padding: 10px 0;
+    overflow: hidden;
+    margin-top: 0px; /* Boşlukları tamamen kapattık */
+}
+
+/* Görünmez köprünün alanını daha da genişleterek kaçmaları tamamen önlüyoruz */
+.dropdown-box-content::before {
+    content: '';
+    position: absolute;
+    top: -25px; /* Koruma alanını yukarı doğru iyice büyüttük */
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: transparent;
+}

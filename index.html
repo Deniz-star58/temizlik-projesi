@@ -12,19 +12,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Sağ Alt Köşe Kurumsal İmza Alanı -->
+<div class="site-signature" style="position: fixed; bottom: 15px; right: 20px; background: rgba(255, 255, 255, 0.85); padding: 8px 15px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eaeaea; backdrop-filter: blur(5px); z-index: 9999; font-family: 'Poppins', sans-serif; transition: 0.3s ease;">
+    <span style="font-size: 12px; color: #666; font-weight: 500;">
+        🛡️ Şirket Sorumlusu: <strong style="color: #333; font-weight: 700;">DENİZ AKPINAR</strong>
+    </span>
+</div>
+
+<style>
+    /* İmzanın üzerine gelince hafifçe parlaması ve estetik durması için ufak bir efekt */
+    .site-signature:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        background: #ffffff;
+        border-color: #00ced1; /* Sitedeki turkuaz rengiyle uyumlu olsun diye */
+    }
+</style>
 
     <!-- NAVBAr (Üst Menü ve İletişim Alanı) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">TemizlikŞirketim</a>
-            <div class="ms-auto d-flex align-items-center">
-                <!-- WhatsApp İletişim Butonu (Attığın sitedeki gibi yeşil buton) -->
+    <div class="main-custom-navbar">
+    <div class="navbar-brand-logo">
+        <a href="index.html">✨ TemizlikŞirketim</a>
+    </div>
+    
+    <div class="navbar-custom-links">
+        <a href="index.html" class="nav-box-link">Ana Sayfa</a>
+        <a href="hakkimizda.html" class="nav-box-link">Hakkımızda</a>
         
-                <a href="https://wa.me/905061965160?text=Merhaba,%20ev%20temizliği%20hizmetiniz%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="btn btn-success me-2 fw-bold">
-    💚 WhatsApp Hattı
-</a>
-            </div>
+        <div class="dropdown-box">
+            <button class="dropdown-box-btn">Hizmetlerimiz ▼</button>
+            <div class="dropdown-box-content">
+    <a href="hizmetlerimiz.html">🏠 Ev Temizliği</a>
+    <a href="hizmetlerimiz.html">🏢 Ofis Temizliği</a>
+    <a href="hizmetlerimiz.html">🏗️ İnşaat Sonrası Temizlik</a>
+</div>
         </div>
+
+        <a href="iletisim.html" class="nav-box-link">İletişim</a>
+
+        <a href="https://wa.me/905061965160" target="_blank" class="nav-box-link" style="background-color: #25d366; color: white !important; border-color: #25d366;">
+            💚 WhatsApp Hattı
+        </a>
+    </div>
+</div>
     </nav>
 
     <!-- HERO SECTION (Giriş Alanı - Büyük Başlık ve Görsel) -->
