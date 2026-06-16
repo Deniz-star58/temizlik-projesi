@@ -375,4 +375,12 @@ html, body {
         text-align: center !important;
         margin-bottom: 10px !important;
     }
+    /* Telefonda üstteki eski menüyü kesin olarak gizler */
+    .main-custom-navbar, 
+    .navbar-brand-logo,
+    header, 
+    nav, 
+    .navbar {
+        display: none !important;
+    }
 }
